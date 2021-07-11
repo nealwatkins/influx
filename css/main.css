@@ -1,5 +1,4 @@
-
-
+ 
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -76,11 +75,7 @@ svg {
   margin-left: 6px;
 }
 
-.icon-down {
-  -ms-transform: rotate(0deg);
-  transform: rotateZ(0deg);
 
-}
 
 .main {
   margin: 0 50px;
@@ -152,6 +147,49 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* drop downs */
+.drop-container {width: 100%}
+.dropdown {
+  position: relative;
+}
+
+ .show .svg-icon {
+  -ms-transform: rotate(0deg);
+  transform: rotateZ(0deg);
+   transition: transform .2s ease-in-out;
+
+}
+.show .dropMenu {
+  display: block!important;
+}
+
+.dropMenu {
+  position: absolute;
+  display: none;
+  top: 42px;
+  left: 0px;
+  border: 1px solid color;
+  width: 109px;
+  background: #005f71;
+  font-size: 0.8em;
+  z-index: 1;
+}
+
+
+.dropMenu li a {
+  display: block;
+  padding: 16px 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 100%
+}
+
+.dropMenu li a:hover {
+  background: #00bcd4;
+}
+
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -168,6 +206,7 @@ ul {
 li {
   align-items: center;
   padding: 5px;
+  width: 100%;
 
 }
 .main {
@@ -180,6 +219,22 @@ li {
 .image-area {
   margin-top: 30px;
 }
+
+.dropMenu {
+  position: static;
+  display: none;
+  width: 100%;
+  border: 1px solid color;
+
+  background: #005f71;
+  font-size: 0.8em;
+  z-index: 1;
+}
+.dropMenu li a {
+
+    margin-left: -30px;
+    color: #fff;
+
 }
 @media only screen and (max-width: 640px) {
   h2 {
